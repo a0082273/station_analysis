@@ -1,5 +1,8 @@
 trash/
-*png
-*csv
 .DS_Store
 *checkpoint.ipynb
+*.png
+*.csv
+*.zip
+*.key
+*.pptx

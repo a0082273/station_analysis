@@ -7,71 +7,70 @@ import numpy as np
 
 # Places_key = 'AIzaSyBsVBU46xItCY1a4Gw1TNSTffAE2TV_GR8'
 Places_key = 'AIzaSyD208hE6JZHAwgrmS9aQViSnY9mvNDZbCA'
-# radius = '500'
-radius = '2000'
+radius = '500'
 
 location_dict = {
-    # 'sakashita': '35.574221,137.531073',
-    # 'ochiaigawa': '35.525171,137.529964',
+    'sakashita': '35.574221,137.531073',
+    'ochiaigawa': '35.525171,137.529964',
     'nakatsugawa': '35.50009,137.502939',
-    # 'minosakamoto': '35.479396,137.449556',
+    'minosakamoto': '35.479396,137.449556',
     'ena': '35.455031,137.40803',
-    # 'takenami': '35.437954,137.353982',
-    # 'kamado': '35.411317,137.305626',
+    'takenami': '35.437954,137.353982',
+    'kamado': '35.411317,137.305626',
     'mizunami': '35.369016,137.252072',
     'tokishi': '35.359764,137.182195',
     'tajimi': '35.334979,137.121042',
-    # 'kokoke': '35.303213,137.101232',
-    # 'jokoji': '35.278604,137.081095',
-    # 'kozoji': '35.264438,137.043071',
-    # 'jinryo': '35.256577,137.010463',
-    # 'kasugai': '35.243034,136.98509',
-    # 'kachigawa': '35.229857,136.956302',
-    # 'shinmoriyama': '35.207303,136.9512',
-    # 'ozone': '35.191489,136.936846',
-    # 'chikusa': '35.170167,136.930662',
-    # 'tsurumai': '35.156389,136.917527',
-    # 'kanayama': '35.143045,136.900905',
-    # 'nagoya': '35.171348,136.883000'
+    'kokoke': '35.303213,137.101232',
+    'jokoji': '35.278604,137.081095',
+    'kozoji': '35.264438,137.043071',
+    'jinryo': '35.256577,137.010463',
+    'kasugai': '35.243034,136.98509',
+    'kachigawa': '35.229857,136.956302',
+    'shinmoriyama': '35.207303,136.9512',
+    'ozone': '35.191489,136.936846',
+    'chikusa': '35.170167,136.930662',
+    'tsurumai': '35.156389,136.917527',
+    'kanayama': '35.143045,136.900905',
+    'nagoya': '35.171348,136.883000'
 }
 
 place_types = [
-    # 'art_gallery',
-    # 'bakery',
-    # 'bar',
-    # 'beauty_salon',
-    # 'book_store',
-    # 'bus_station',
-    # 'cafe',
-    # 'car_rental',
-    # 'city_hall',
-    # 'clothing_store',
-    # 'convenience_store',
-    # 'department_store',
-    # 'doctor',
-    # 'electronics_store',
-    # 'florist',
-    # 'gym',
-    # 'hair_care',
-    # 'home_goods_store',
-    # 'hospital',
-    # 'laundry',
-    # 'library',
-    # 'liquor_store',
-    # 'local_government_office',
-    # 'lodging', #ホテル
-    # 'meal_delivery',
-    # 'meal_takeaway',
-    # 'movie_theater',
-    # 'night_club',
+    'art_gallery',
+    'bakery',
+    'bar',
+    'beauty_salon',
+    'book_store',
+    'bus_station',
+    'cafe',
+    'car_rental',
+    'city_hall',
+    'clothing_store',
+    'convenience_store',
+    'department_store',
+    'doctor',
+    'electronics_store',
+    'florist',
+    'gym',
+    'hair_care',
+    'home_goods_store',
+    'hospital',
+    'laundry',
+    'library',
+    'liquor_store',
+    'local_government_office',
+    'lodging', #ホテル
+    'meal_delivery',
+    'meal_takeaway',
+    'movie_theater',
+    'night_club',
     'park',
-    # 'parking',
-    # 'restaurant',
-    # 'school',
-    # 'shopping_mall',
-    # 'spa',
-    # 'store',
-    # 'university'
+    'parking',
+    'restaurant',
+    'school',
+    'shopping_mall',
+    'spa',
+    'store',
+    'university'
 ]
 
 
@@ -117,6 +116,8 @@ def make_place_list(url):
 
 if __name__ == '__main__':
     for iloc in range(len(location_dict)):
+    # for iloc in range(10, 20):
+    # for iloc in range(len(location_dict)-1, len(location_dict)-5, -1):
         place_i = pd.DataFrame()
         location = list(location_dict.keys())[iloc]
         location_geo = list(location_dict.values())[iloc]
