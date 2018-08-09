@@ -1,5 +1,7 @@
 trash/
+__pycache__/
 .DS_Store
+api_key.py
 *checkpoint.ipynb
 *.png
 *.csv

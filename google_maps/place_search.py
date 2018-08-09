@@ -4,9 +4,9 @@
 import urllib.request, json, time
 import pandas as pd
 import numpy as np
+import api_key
 
-# Places_key = 'AIzaSyBsVBU46xItCY1a4Gw1TNSTffAE2TV_GR8'
-Places_key = 'AIzaSyD208hE6JZHAwgrmS9aQViSnY9mvNDZbCA'
+Places_key = api_key.places
 # radius = '500'
 radius = '2000'
 
