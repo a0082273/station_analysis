@@ -7,8 +7,7 @@ import numpy as np
 import api_key
 
 Places_key = api_key.places
-# radius = '500'
-radius = '2000'
+radius = '500'
 
 location_dict = {
     # 'sakashita': '35.574221,137.531073',
